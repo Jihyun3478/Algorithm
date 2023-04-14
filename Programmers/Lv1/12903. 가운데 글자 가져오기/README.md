@@ -9,24 +9,5 @@
 #### ✔️ Problem
 `단어 s의 가운데 글자를 반환`하는 함수, solution을 만들어 보세요. 단어의 길이가 짝수라면 가운데 두글자를 반환하면 됩니다.
 
-
-
-#### ✔️ Code
-```java
-class Solution {
-    public String solution(String s) {
-        String answer = "";
-        
-        if(s.length() % 2 == 0) {
-            answer = s.substring(s.length()/2-1, s.length()/2+1);
-        }
-        else {
-            answer = s.substring(s.length()/2, s.length()/2+1);
-        }
-        return answer;
-    }
-}
-```
-
 #### ✔️ 성능
 <img src="https://velog.velcdn.com/images/ljh3478/post/cdd2c55f-8023-4f61-bcea-3b64b3e3bfbf/image.png" width="250" height="360"/>
