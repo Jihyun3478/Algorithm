@@ -1,3 +1,4 @@
+/* 리팩토링 전 */
 /*
 class Solution {
     public String solution(String phone_number) {
