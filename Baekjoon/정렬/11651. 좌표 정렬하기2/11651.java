@@ -3,7 +3,6 @@
 /*
 import java.io.IOException;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Scanner;
 
 public class Main {
@@ -20,7 +19,8 @@ public class Main {
         }
 
         Arrays.sort(arr, (o1, o2) -> {
-            return o1[0]!=o2[0] ? o1[0]-o2[0] : o1[1]-o2[1];
+            if(o1[1] == o2[1]) return o1[0] - o2[0];
+            else return o1[1] - o2[1];
         });
 
         for (int i = 0; i < N; i++) {
@@ -52,11 +52,11 @@ public class Main {
         }
 
         Arrays.sort(arr, (o1, o2) -> {
-            if(o1[0] == o2[0]) {
-                return o1[1] - o2[1];
+            if(o1[1] == o2[1]) {
+                return o1[0] - o2[0];
             }
             else {
-                return o1[0] - o2[0];
+                return o1[1] - o2[1];
             }
         });
 
