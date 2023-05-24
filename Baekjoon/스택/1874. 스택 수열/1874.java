@@ -16,7 +16,7 @@ public class Main {
             int value = Integer.parseInt(br.readLine());
 
             if(value > start) {
-                for(int i = start+1; i <= value; i++) {
+                for(int i = start+1; i <= value; i++) {s
                     stack.push(i);
                     sb.append('+').append('\n');
                 }
