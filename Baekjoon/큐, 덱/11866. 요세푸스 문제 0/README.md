@@ -15,4 +15,4 @@
 여러분이 할 일은, 현재 Queue에 있는 문서의 수와 중요도가 주어졌을 때, 어떤 한 문서가 몇 번째로 인쇄되는지 알아내는 것이다. 예를 들어 위의 예에서 C문서는 1번째로, A문서는 3번째로 인쇄되게 된다.
 
 #### ✔️ 성능
-<img src="" height="40"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/78844f8c-fe06-458e-9439-e61c412a9ff1/image.png" height="40"/>
