@@ -17,4 +17,4 @@
 네오가 프로도의 비상금을 손에 넣을 수 있도록, 비밀지도의 암호를 해독하는 작업을 도와줄 프로그램을 작성하라.
 
 #### ✔️ 성능
-<img src="" width="200" height="250"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/26971ec6-93c8-46f2-aa3f-4afd1f4cdbd9/image.png" width="200" height="250"/>

@@ -1,16 +1,19 @@
-class Solution {
-    public int solution(int[] number) {
-        int answer = 0;
+import java.util.Arrays;
 
-        for(int i = 0; i < number.length-2; i++) {
-            for(int j = i+1; j < number.length-1; j++) {
-                for(int k = j+1; k < number.length; k++) {
-                    if((number[i]+number[j]+number[k]) == 0) {
-                        answer++;
-                    }
-                }
+class Solution {
+    public String[] solution(int n, int[] arr1, int[] arr2) {
+        String[] answer = new String[n];
+
+        for(int i = 0; i < n; i++) {
+            answer[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
+            answer[i] = answer[i].replaceAll("1", "#");
+            answer[i] = answer[i].replaceAll("0", " ");
+
+            while(answer[i].length() < n) {
+                answer[i] = " " + answer[i];
             }
         }
+
         return answer;
     }
 }

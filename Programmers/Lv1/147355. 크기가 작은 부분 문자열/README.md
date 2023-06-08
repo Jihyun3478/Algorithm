@@ -11,4 +11,4 @@
 예를 들어, t="3141592"이고 p="271" 인 경우, t의 길이가 3인 부분 문자열은 314, 141, 415, 159, 592입니다. 이 문자열이 나타내는 수 중 271보다 작거나 같은 수는 141, 159 2개 입니다.
 
 #### ✔️ 성능
-<img src="" width="200" height="250"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/67cf25c4-49f0-4d99-8ced-c152819c6fb0/image.png" width="200" height="400"/>
