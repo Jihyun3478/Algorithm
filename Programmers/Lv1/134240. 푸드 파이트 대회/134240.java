@@ -1,14 +1,18 @@
 import java.util.*;
 
 class Solution {
-    public int[] solution(int[] numbers) {
-        TreeSet<Integer> set = new TreeSet<>();
+    public String solution(int[] food) {
+        String temp = "";
 
-        for(int i = 0; i < numbers.length; i++) {
-            for(int j = i+1; j < numbers.length; j++) {
-                set.add(numbers[i] + numbers[j]);
+        for(int i = 1; i < food.length; i++) {
+            for(int j = 0; j < food[i]/2; j++) {
+                temp += i;
             }
         }
-        return set.stream().mapToInt(Integer::intValue).toArray();
+
+        StringBuffer sb = new StringBuffer(temp);
+        String reverse = sb.reverse().toString();
+        String answer = temp + "0" + reverse;
+        return answer;
     }
 }
