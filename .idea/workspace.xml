@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd856990-3b88-4f0a-a4f9-9e05b26f836d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/최소_최대/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/최소_최대/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,20 +33,20 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/최소_최대",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/최소_최대&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/Baekjoon/최소_최대" />
@@ -56,11 +54,11 @@
       <recent name="$PROJECT_DIR$/src/Baekjoon" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/Programmers/Lv1/행렬의_덧셈" />
       <recent name="$PROJECT_DIR$/src/Programmers/Lv1/핸드폰_번호_가리기" />
       <recent name="$PROJECT_DIR$/src/Programmers/Lv1/푸드_파이트_대회" />
       <recent name="$PROJECT_DIR$/src/Programmers/Lv1/크기가_작은_부분_문자열" />
-      <recent name="$PROJECT_DIR$/src/Programmers/Lv1/최소직사각형" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="크기가_작은_부분_문자열" />
@@ -73,7 +71,7 @@
       <recent name="Baekjoon.최소_최대" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Baekjoon.최소_최대.Main">
+  <component name="RunManager" selected="Application.Baekjoon.알람_시계.Main">
     <configuration name="Baekjoon.알람_시계.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Baekjoon.알람_시계.Main" />
       <module name="Algorithm" />
@@ -115,7 +113,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Baekjoon.최소_최대.Main" />
         <item itemvalue="Application.Baekjoon.알람_시계.Main" />
         <item itemvalue="Application.Main" />
       </list>
@@ -131,6 +128,7 @@
       <updated>1710047514095</updated>
       <workItem from="1710047515224" duration="354000" />
       <workItem from="1710047933110" duration="8792000" />
+      <workItem from="1710066068895" duration="18000" />
     </task>
     <servers />
   </component>
