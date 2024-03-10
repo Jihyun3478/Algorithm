@@ -19,4 +19,4 @@
 현재 상근이가 설정한 알람 시각이 주어졌을 때, 창영이의 방법을 사용한다면, 이를 언제로 고쳐야 하는지 구하는 프로그램을 작성하시오.
 
 #### ✔️ 컴파일 시간 & 메모리
-<img src="https://velog.velcdn.com/images/ljh3478/post/26e6fbad-d980-47a2-9adf-b3c6336ba07d/image.png" width="800" height="60"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/46cc5dd0-b0ef-4d0d-a507-08775d25b6e5/image.png" width="700" height="120"/>

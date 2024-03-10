@@ -11,4 +11,4 @@
 하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
 
 #### ✔️ 컴파일 시간 & 메모리
-<img src="https://velog.velcdn.com/images/ljh3478/post/26e6fbad-d980-47a2-9adf-b3c6336ba07d/image.png" width="800" height="60"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/26e6fbad-d980-47a2-9adf-b3c6336ba07d/image.png" width="700" height="50"/>
