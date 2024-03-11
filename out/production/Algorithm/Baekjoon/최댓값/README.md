@@ -15,4 +15,4 @@
 이 주어지면, 이들 중 최댓값은 85이고, 이 값은 8번째 수이다.
 
 #### ✔️ 컴파일 시간 & 메모리
-<img src="https://velog.velcdn.com/images/ljh3478/post/55061a74-9f13-401e-adf9-784dca358a2a/image.png" width="700" height="50"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/18bbd766-0851-4891-b5b4-16dd69b3783a/image.png" width="700" height="50"/>
