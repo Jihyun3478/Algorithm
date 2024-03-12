@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd856990-3b88-4f0a-a4f9-9e05b26f836d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/빠른_A_더하기_B/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/빠른_A_더하기_B/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Baekjoon/숫자의_합/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Baekjoon/숫자의_합/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/빠른_A_더하기_B",
+    "last_opened_file_path": "/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/숫자의_합",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -51,11 +51,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Baekjoon/숫자의_합" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/빠른_A_더하기_B" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/기찍_N" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/최댓값" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/최소_최대" />
-      <recent name="$PROJECT_DIR$/src/Baekjoon/알람_시계" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -72,13 +72,14 @@
       <recent name="최소직사각형" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Baekjoon.숫자의_합" />
       <recent name="Baekjoon.빠른_A_더하기_B" />
       <recent name="Baekjoon.기찍_N" />
       <recent name="Baekjoon.최댓값" />
       <recent name="Baekjoon.최소_최대" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Baekjoon.빠른_A_더하기_B.Main">
+  <component name="RunManager" selected="Application.Baekjoon.숫자의_합.Main">
     <configuration name="Baekjoon.빠른_A_더하기_B.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Baekjoon.빠른_A_더하기_B.Main" />
       <module name="Algorithm" />
@@ -131,6 +132,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Baekjoon.숫자의_합.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Baekjoon.숫자의_합.Main" />
+      <module name="Algorithm" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Baekjoon.숫자의_합.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Baekjoon.최소_최대.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Baekjoon.최소_최대.Main" />
       <module name="Algorithm" />
@@ -144,26 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Baekjoon.별_찍기2.Main" />
-      <module name="Algorithm" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Baekjoon.별_찍기2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Baekjoon.숫자의_합.Main" />
         <item itemvalue="Application.Baekjoon.빠른_A_더하기_B.Main" />
         <item itemvalue="Application.Baekjoon.기찍_N.Main" />
         <item itemvalue="Application.Baekjoon.최댓값.Main" />
         <item itemvalue="Application.Baekjoon.알람_시계.Main" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +180,8 @@
       <workItem from="1710047933110" duration="8792000" />
       <workItem from="1710066068895" duration="18000" />
       <workItem from="1710066124015" duration="1420000" />
-      <workItem from="1710143909120" duration="2534000" />
+      <workItem from="1710143909120" duration="3625000" />
+      <workItem from="1710204091282" duration="2866000" />
     </task>
     <servers />
   </component>
