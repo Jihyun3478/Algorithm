@@ -9,6 +9,8 @@
 | 2562. 최댓값         | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%B5%9C%EB%8C%93%EA%B0%92/Main.java) |
 | 2742. 기찍 N        | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EA%B8%B0%EC%B0%8D_N/Main.java) |
 | 15552. 빠른 A 더하기 B | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%B9%A0%EB%A5%B8_A_%EB%8D%94%ED%95%98%EA%B8%B0_B/Main.java) |
+| 3052. 나머지         | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%82%98%EB%A8%B8%EC%A7%80/Main.java) |
+| 1152. 단어의 개수| [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%8B%A8%EC%96%B4%EC%9D%98_%EA%B0%9C%EC%88%98/Main.java) |
 
 ## 💡 LeetCode
 | 문제 번호 | 링크 |
