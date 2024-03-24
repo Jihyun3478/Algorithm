@@ -10,4 +10,4 @@
 이를 구하는 프로그램을 작성하시오. 단, 한 단어가 여러 번 등장하면 등장한 횟수만큼 모두 세어야 한다.
 
 #### ✔️ 컴파일 시간 & 메모리
-<img src="https://velog.velcdn.com/images/ljh3478/post/e6ab1b3d-9973-4fe3-9c15-490a68946860/image.png" width="700" height="50"/>
+<img src="https://velog.velcdn.com/images/ljh3478/post/e86dca0c-d8a2-4def-bd15-81c74fcf0407/image.png" width="700" height="50"/>

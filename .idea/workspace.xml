@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fd856990-3b88-4f0a-a4f9-9e05b26f836d" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/단어의_개수/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Baekjoon/단어의_개수/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Algorithm/Baekjoon/단어의_개수/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Algorithm/Baekjoon/단어의_개수/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +34,27 @@
     <option name="showLibraryContents" value="true" />
     <option name="showScratchesAndConsoles" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/단어의_개수",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jihyun/Desktop/취업/알고리즘/Algorithm/src/Baekjoon/평균&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/Baekjoon/평균" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/단어의_개수" />
       <recent name="$PROJECT_DIR$/src/Baekjoon" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/나머지" />
       <recent name="$PROJECT_DIR$/src/Baekjoon/숫자의_합" />
-      <recent name="$PROJECT_DIR$/src/Baekjoon/빠른_A_더하기_B" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -73,14 +71,14 @@
       <recent name="최소직사각형" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="Baekjoon.평균" />
       <recent name="Baekjoon.단어의_개수" />
       <recent name="Baekjoon.나머지" />
       <recent name="Baekjoon.숫자의_합" />
       <recent name="Baekjoon.빠른_A_더하기_B" />
-      <recent name="Baekjoon.기찍_N" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Baekjoon.단어의_개수.Main">
+  <component name="RunManager" selected="Application.Baekjoon.평균.Main">
     <configuration name="Baekjoon.빠른_A_더하기_B.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Baekjoon.빠른_A_더하기_B.Main" />
       <module name="Algorithm" />
@@ -94,12 +92,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Baekjoon.최댓값.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Baekjoon.최댓값.Main" />
+    <configuration name="Baekjoon.평균.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Baekjoon.평균.Main" />
       <module name="Algorithm" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="Baekjoon.최댓값.*" />
+          <option name="PATTERN" value="Baekjoon.평균.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -174,11 +172,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Baekjoon.평균.Main" />
         <item itemvalue="Application.Baekjoon.단어의_개수.Main" />
         <item itemvalue="Application.Main" />
         <item itemvalue="Application.Baekjoon.빠른_A_더하기_B.Main" />
         <item itemvalue="Application.Baekjoon.기찍_N.Main" />
-        <item itemvalue="Application.Baekjoon.최댓값.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +195,8 @@
       <workItem from="1710143909120" duration="3625000" />
       <workItem from="1710204091282" duration="3890000" />
       <workItem from="1710847538940" duration="2708000" />
-      <workItem from="1711088394083" duration="1593000" />
+      <workItem from="1711088394083" duration="4728000" />
+      <workItem from="1711160734738" duration="7327000" />
     </task>
     <servers />
   </component>
