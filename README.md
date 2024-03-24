@@ -1,16 +1,17 @@
 # 백준 & LeetCode & 프로그래머스 문제 풀이 목록
 
 ## 💡 Baekjoon
-| 문제 번호             | 링크 |
-|:------------------| :--: |
-| 2439. 별 찍기 - 2    | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%B3%84_%EC%B0%8D%EA%B8%B02/Main.java) |
-| 2884. 알람시계        | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%95%8C%EB%9E%8C_%EC%8B%9C%EA%B3%84/Main.java) |
-| 10818. 최소, 최대     | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%B5%9C%EC%86%8C_%EC%B5%9C%EB%8C%80/Main.java) |
-| 2562. 최댓값         | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%B5%9C%EB%8C%93%EA%B0%92/Main.java) |
-| 2742. 기찍 N        | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EA%B8%B0%EC%B0%8D_N/Main.java) |
+| 문제 번호             |                                                                링크                                                                 |
+|:------------------|:---------------------------------------------------------------------------------------------------------------------------------:|
+| 2439. 별 찍기 - 2    |           [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%B3%84_%EC%B0%8D%EA%B8%B02/Main.java)            |
+| 2884. 알람시계        |       [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%95%8C%EB%9E%8C_%EC%8B%9C%EA%B3%84/Main.java)        |
+| 10818. 최소, 최대     |       [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%B5%9C%EC%86%8C_%EC%B5%9C%EB%8C%80/Main.java)        |
+| 2562. 최댓값         |            [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EC%B5%9C%EB%8C%93%EA%B0%92/Main.java)             |
+| 2742. 기찍 N        |                [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EA%B8%B0%EC%B0%8D_N/Main.java)                |
 | 15552. 빠른 A 더하기 B | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%B9%A0%EB%A5%B8_A_%EB%8D%94%ED%95%98%EA%B8%B0_B/Main.java) |
-| 3052. 나머지         | [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%82%98%EB%A8%B8%EC%A7%80/Main.java) |
-| 1152. 단어의 개수| [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%8B%A8%EC%96%B4%EC%9D%98_%EA%B0%9C%EC%88%98/Main.java) |
+| 3052. 나머지         |            [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%82%98%EB%A8%B8%EC%A7%80/Main.java)             |
+| 1152. 단어의 개수|   [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%EB%8B%A8%EC%96%B4%EC%9D%98_%EA%B0%9C%EC%88%98/Main.java)   |
+| 1546. 평균|                 [링크](https://github.com/Jihyun3478/Algorithm/blob/main/src/Baekjoon/%ED%8F%89%EA%B7%A0/Main.java)                 |
 
 ## 💡 LeetCode
 | 문제 번호 | 링크 |
