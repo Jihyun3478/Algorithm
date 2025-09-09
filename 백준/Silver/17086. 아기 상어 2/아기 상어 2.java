@@ -1,69 +1,74 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
+import java.io.OutputStreamWriter;
+import java.util.ArrayDeque;
 import java.util.Queue;
 import java.util.StringTokenizer;
 
-class Main {
-    
-    static int N, M, sea[][], answer;
-    static int[] dx = {-1, 1, 0, 0, -1, -1, 1, 1};
-    static int[] dy = {0, 0, -1, 1, -1, 1, -1, 1};
-    
-    
+public class Main {
     public static void main(String[] args) throws IOException {
+        //   0 1 2
+        // 0 o o o
+        // 1 o o o
+        // 2 o o o
+        int[] dy = {-1, -1, -1, 0, 0, 1, 1, 1};
+        int[] dx = {-1, 0, 1, -1, 1, -1, 0, 1};
+
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st;
-        
-        st = new StringTokenizer(br.readLine());
-        N = Integer.parseInt( st.nextToken() );
-        M = Integer.parseInt( st.nextToken() );
-        
-        sea = new int[N][M];
-                
-        for( int i=0; i<N; i++ ) {
-            st = new StringTokenizer( br.readLine() );
-            for( int j=0; j<M; j++ ) {
-                sea[i][j] = Integer.parseInt( st.nextToken() );
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        // 공간의 크기 입력 N과 M 입력받기
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        // N개의 줄에 공간의 상태 입력 받기
+        Queue<int[]> queue = new ArrayDeque<>();
+        int[][] distance = new int[N][M];
+        for (int i = 0; i < N; i++) {
+            st = new StringTokenizer(br.readLine());
+            for (int j = 0; j < M; j++) {
+                int node = Integer.parseInt(st.nextToken());
+
+                if (node == 1) {
+                    distance[i][j] = 0;
+                    queue.add(new int[]{i, j});
+                } else {
+                    distance[i][j] = -1;
+                }
             }
         }
-        
-        int tmp = 0;
-        for( int i=0; i<N; i++ ) {
-            for( int j=0; j<M; j++ ) {
-                if( sea[i][j] == 1 ) continue;
-                
-                tmp = BFS(i, j);
-                answer = tmp > answer ? tmp : answer;                
+
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int y = current[0];
+            int x = current[1];
+
+            for (int i = 0; i < 8; i++) {
+                int currentY = y + dy[i];
+                int currentX = x + dx[i];
+
+                if (currentY >= 0 && currentY < N && currentX >= 0 && currentX < M) {
+                    if (distance[currentY][currentX] == -1) {
+                        distance[currentY][currentX] = distance[y][x] + 1;
+                        queue.add(new int[] {currentY, currentX});
+                    }
+                }
             }
         }
-        System.out.println( answer );     
-    }
-    
-    
-    static int BFS( int x, int y ) {
-        boolean visit[][] = new boolean[N][M];
-        Queue<int[]> q = new LinkedList<int[]>();
-        
-        q.add(new int[] {x, y, 0});
-        visit[x][y] = true;
-        
-        while( !q.isEmpty() ) {
-            int now[] = q.poll();
-            
-            for( int i=0; i<8; i++ ) {
-                int nx = now[0] + dx[i];
-                int ny = now[1] + dy[i];
-                int val = now[2];
-                
-                if( nx<0 || ny<0 || nx>=N || ny>=M ) continue;
-                if( visit[nx][ny] == true ) continue;
-                if( sea[nx][ny] == 1 ) return val+1;
-                visit[nx][ny] = true;
-                q.add( new int[] {nx, ny, val+1} );
+
+        // 안전 거리의 최댓값 출력하기
+        int max = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < M; j++) {
+                int current = distance[i][j];
+                max = Math.max(current, max);
             }
         }
-        return 0;
+
+        bw.write(String.valueOf(max));
+        bw.flush();
     }
 }
