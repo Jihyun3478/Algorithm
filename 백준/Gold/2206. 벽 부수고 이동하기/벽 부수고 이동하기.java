@@ -1,78 +1,88 @@
-import java.util.*;
- 
-public class Main {    
- 
-    static int[] dx = { 1, 0, -1, 0 };
-    static int[] dy = { 0, 1, 0, -1 };
-    static int n, m;
-    static int[][] board;
-    static boolean[][][] visited;
- 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
- 
-        n = scanner.nextInt();
-        m = scanner.nextInt();
-        scanner.nextLine();
-        
-        board = new int[n][m];
-        for (int i = 0; i < n ; i++) {
-            String str = scanner.nextLine();
-            for (int j = 0; j < m; j++) {
-                board[i][j] = Integer.valueOf(str.charAt(j)) - '0';
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayDeque;
+import java.util.Queue;
+import java.util.StringTokenizer;
+
+public class Main {
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        // N과 M, N x M 행렬 입력 받기
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int N = Integer.parseInt(st.nextToken());
+        int M = Integer.parseInt(st.nextToken());
+
+        int[] dy = {-1, 0, 0, 1};
+        int[] dx = {0, -1, 1, 0};
+
+        // (1, 1)에서 (N, M)까지 이동할 수 있는 최단 경로 구하기
+        // 이 때 이동할 수 없는 벽인 1인 곳을 한 개까지만 부수고 이동할 수 있음
+        int[][] map = new int[N][M];
+        int[][][] distance = new int[N][M][2];
+        for (int i = 0; i < N; i++) {
+            String line = br.readLine();
+            for (int j = 0; j < M; j++) {
+                map[i][j] = line.charAt(j) - '0';
+                distance[i][j][0] = -1;
+                distance[i][j][1] = -1;
             }
         }
- 
-        visited = new boolean[n][m][2];
-        System.out.println(bfs(0, 0));
-    }
- 
-    private static int bfs(int x, int y) {
-        Queue<Node> q = new LinkedList<>();
-        q.add(new Node(x, y, 1, 0));
-        visited[x][y][0] = true; //0은 벽을 부시지 않고 방문한 노드의 방문 여부
-        visited[x][y][1] = true; //1은 벽을 부시면서 방문한 노드의 방문 여부
- 
-        while (!q.isEmpty()) {
-            Node current = q.poll();
- 
-            if (current.x == n - 1 && current.y == m - 1) return current.count;
- 
+
+        Queue<int[]> queue = new ArrayDeque<>();
+        queue.add(new int[] {0, 0, 0});
+
+        // 시작점이 벽일 경우
+        if (map[0][0] == 1) {
+            distance[0][0][1] = 1;
+            queue.add(new int[] {0, 0, 1});
+        } else {
+            distance[0][0][0] = 1;
+            queue.add(new int[] {0, 0, 0});
+        }
+
+        while (!queue.isEmpty()) {
+            int[] current = queue.poll();
+            int y = current[0];
+            int x = current[1];
+            int broken = current[2];
+
             for (int i = 0; i < 4; i++) {
-                int nx = current.x + dx[i];
-                int ny = current.y + dy[i];
- 
-                if (nx >= 0 && nx < n && ny >= 0 && ny < m) {
-                    if(board[nx][ny] == 0) { //벽이 아닐 때
-                        if (visited[nx][ny][current.wall] == false) { //현재까지 온 방법(벽을 부쉈는지 아닌지)으로 방문한 적이 없다면 방문한다.
-                            q.add(new Node(nx, ny, current.count + 1, current.wall));
-                            visited[nx][ny][current.wall] = true;
-                        }
-                    }    
-                    else if (board[nx][ny] == 1) { //벽일때
-                        if (current.wall == 0 && visited[nx][ny][1] == false) { //현재까지 벽을 부순적이 없고, 벽을 부숴서 방문한 적이 없다면 방문한다.
-                            q.add(new Node(nx, ny, current.count + 1, 1));
-                            visited[nx][ny][1] = true;
-                        }
+                int currentY = y + dy[i];
+                int currentX = x + dx[i];
+
+                if (currentY >= 0 && currentY < N && currentX >= 0 && currentX < M) {
+                    if (map[currentY][currentX] == 0 && distance[currentY][currentX][broken] == -1) {
+                        distance[currentY][currentX][broken] = distance[y][x][broken] + 1;
+                        queue.add(new int[] {currentY, currentX, broken});
+
+                    } else if (map[currentY][currentX] == 1 && broken == 0 && distance[currentY][currentX][1] == -1) {
+                        distance[currentY][currentX][1] = distance[y][x][0] + 1;
+                        queue.add(new int[] {currentY, currentX, 1});
                     }
                 }
             }
         }
- 
-        return -1;
-    }
- 
-    private static class Node {
-        private int x;
-        private int y;
-        private int count;
-        private int wall; //벽을 부시면서 왔는지 아닌지. 0이면 아니고 1이면 벽을 부시면서 왔다는 것을 의미한다.
- 
-        public Node(int x, int y, int count, int wall) {
-            this.x = x;
-            this.y = y;
-            this.count = count;
-            this.wall = wall;
+
+        // 최단 경로 출력, 불가능 할 때는 -1 출력
+        int d0 = distance[N - 1][M - 1][0];
+        int d1 = distance[N - 1][M - 1][1];
+        int answer = 0;
+        if (d0 == -1 && d1 == -1) {
+            answer = -1;
+        } else if (d0 == -1) {
+           answer = d1;
+        }  else if (d1 == -1) {
+            answer = d0;
+        } else {
+            answer = Math.min(d0, d1);
         }
+
+        bw.write(String.valueOf(answer));
+        bw.flush();
     }
 }
