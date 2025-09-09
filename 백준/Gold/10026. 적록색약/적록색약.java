@@ -1,87 +1,85 @@
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.Arrays;
 
 public class Main {
+    static int[] dy = {-1, 0, 0, 1};
+    static int[] dx = {0, -1, 1, 0};
+    static boolean[][] visited;
 
-	static int n;
-	static int[][] map;
-	static boolean[][] checked;
-	static int[] dx = {-1,0,1,0};
-	static int[] dy = {0,-1,0,1};
-	public static void main(String[] args) throws IOException{
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		
-		n = Integer.parseInt(br.readLine());
-		map = new int[n][n];
-		checked = new boolean[n][n];
-		int cnt=0;
-		int rgCnt=0;
-		
-		for(int i=0; i<n; i++) {
-			String[] color = br.readLine().split("");
-			for(int j=0; j<n; j++) {
-				if(color[j].equals("R")) {
-					map[i][j] = 1;
-				}else if(color[j].equals("G")) {
-					map[i][j] = 2;
-				}else {
-					map[i][j] = 3;
-				}
-				
-			}
-		}
-		
-		
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				for(int k=1; k<4; k++) {
-					if(!checked[i][j] && map[i][j] == k) {
-						dfs(i,j,k);
-						cnt++;
-					}
-				}
-			}
-		}
-		
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				if(map[i][j] ==1 ) {
-					map[i][j] = 2;
-				}
-			}
-		}
-		
-		checked = new boolean[n][n];
-		for(int i=0; i<n; i++) {
-			for(int j=0; j<n; j++) {
-				for(int k=2; k<4; k++) {
-					if(!checked[i][j] && map[i][j] == k) {
-						dfs(i,j,k);
-						rgCnt++;
-					}
-				}
-			}
-		}
-		System.out.println(cnt+" "+rgCnt);
-		
-		
-	}
-	
-	static void dfs(int x, int y, int color) {
-		
-		checked[x][y] = true;
-		for(int i=0; i<4; i++) {
-			int nx = x + dx[i];
-			int ny = y + dy[i];
-			
-			if(nx <0 || ny <0 || nx>n-1 || ny>n-1) continue;
-			if(checked[nx][ny]) continue;
-			
-			if(map[nx][ny] == color) {
-				dfs(nx,ny, color);
-			}
-		}
-		
-	}
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+
+        // N과 N줄의 그림 입력받기
+        int N = Integer.parseInt(br.readLine());
+
+        visited = new boolean[N][N];
+        String[][] board = new String[N][N];
+        for (int i = 0; i < N; i++) {
+            String line = br.readLine();
+            for (int j = 0; j < N; j++) {
+                board[i][j] = String.valueOf(line.charAt(j));
+            }
+        }
+
+        // 적록색약이 아닌 사람이 봤을 때의 구역 개수 구하기
+        int sectorCnt = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (!visited[i][j]) {
+                    dfs(board, i, j);
+                    sectorCnt++;
+                }
+            }
+        }
+
+        // 적록색약인 사람이 봤을 때의 구역 개수 구하기
+        for (int i = 0; i < N; i++) {
+            Arrays.fill(visited[i], false);
+        }
+
+        String[][] newBoard = new String[N][N];
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                newBoard[i][j] = board[i][j];
+                if (board[i][j].equals("G")) {
+                    newBoard[i][j] = "R";
+                }
+            }
+        }
+
+        int newSectorCnt = 0;
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (!visited[i][j]) {
+                    dfs(newBoard, i, j);
+                    newSectorCnt++;
+                }
+            }
+        }
+
+        // 2개의 개수 출력하기
+        bw.write(sectorCnt + " " + newSectorCnt);
+        bw.flush();
+    }
+
+    private static void dfs(String[][] board, int i, int j) {
+        visited[i][j] = true;
+        String color = board[i][j];
+
+        for (int k = 0; k < 4; k++) {
+            int currentY = i + dy[k];
+            int currentX = j + dx[k];
+
+            if (currentY >= 0 && currentY < board[0].length && currentX >= 0 && currentX < board[0].length) {
+                if (!visited[currentY][currentX] && board[currentY][currentX].equals(color)) {
+                    dfs(board, currentY, currentX);
+                }
+            }
+        }
+    }
 }
