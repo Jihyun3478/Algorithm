@@ -3,8 +3,6 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.StringTokenizer;
 
 public class Main {
@@ -16,40 +14,46 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
 
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int[] numbers = new int[N];
+        int[] A = new int[N];
+        int[] LIS = new int[N];
         for (int i = 0; i < N; i++) {
-            numbers[i] = Integer.parseInt(st.nextToken());
+            A[i] = Integer.parseInt(st.nextToken());
         }
 
-        // 증가하는 부분 수열 구하기
-        List<Integer> tails = new ArrayList<>();
-        for (int i = 0; i < N; i++) {
-            if (tails.isEmpty()) {
-                tails.add(numbers[0]);
-            }
+        // LIS 초기 값으로 첫 번째 수열의 값을 가짐
+        LIS[0] = A[0];
+        int lengthOfLIS = 1;
 
-            int left = 0;
-            int right = tails.size() - 1;
-            int pos = tails.size();
-            while (left <= right) {
-                int mid = (left + right) / 2;
+        for (int i = 1; i < N; i++) {
+            int key = A[i];
 
-                if (tails.get(mid) >= numbers[i]) {
-                    pos = mid;
-                    right = mid - 1;
-                } else {
-                    left = mid + 1;
-                }
-            }
-            if (pos == tails.size()) {
-                tails.add(numbers[i]);
+            // 만약 key가 LIS의 마지막 값보다 클 경우 추가해줌
+            if (LIS[lengthOfLIS - 1] < key) {
+                lengthOfLIS++;
+                LIS[lengthOfLIS - 1] = key;
             } else {
-                tails.set(pos, numbers[i]);
+                // Lower Bound 이분탐색
+                int left = 0;
+                int right = lengthOfLIS;
+
+                while (left < right) {
+                    int mid = (left + right) / 2;
+
+                    if (LIS[mid] < key) {
+                        left = mid + 1;
+                    } else {
+                        right = mid;
+                    }
+                }
+                // left가 LIS에서 대치될 원소의 위치가 됨
+                // 해당 위치에 key 값으로 원소를 바꿔줌
+                LIS[left] = key;
             }
         }
 
         // 증가하는 부분 수열의 길이 출력
-        bw.write(String.valueOf(tails.size()));
+        bw.write(String.valueOf(lengthOfLIS));
         bw.flush();
     }
 }
+
