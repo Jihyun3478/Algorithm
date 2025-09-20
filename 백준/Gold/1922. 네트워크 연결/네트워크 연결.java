@@ -3,12 +3,14 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
-import java.util.Arrays;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
+import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
 public class Main {
-    private static int[] parent;
+    private static boolean[] visited;
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
@@ -18,56 +20,53 @@ public class Main {
         int N = Integer.parseInt(br.readLine());
         int M = Integer.parseInt(br.readLine());
 
-        parent = new int[N + 1];
+        visited = new boolean[N + 1];
         for (int i = 1; i <= N; i++) {
-            parent[i] = i;
+            visited[i] = false;
         }
 
         // 간선 배열 입력받기
-        int[][] edges = new int[M][3];
+        List<int[]>[] adj = new ArrayList[N + 1];
+        for (int i = 1; i <= N; i++) {
+            adj[i] = new ArrayList<>();
+        }
+
         for (int i = 0; i < M; i++) {
             StringTokenizer st = new StringTokenizer(br.readLine());
-            edges[i][0] = Integer.parseInt(st.nextToken());
-            edges[i][1] = Integer.parseInt(st.nextToken());
-            edges[i][2] = Integer.parseInt(st.nextToken());
+            int a = Integer.parseInt(st.nextToken());
+            int b = Integer.parseInt(st.nextToken());
+            int c = Integer.parseInt(st.nextToken());
+
+            adj[a].add(new int[] {b, c});
+            adj[b].add(new int[] {a, c});
         }
-        // 간선 배열 오름차순 정렬
-        Arrays.sort(edges, Comparator.comparingInt(e -> e[2]));
 
-        int picked = 0, sum = 0;
-        for (int i = 0; i < M && picked != N - 1; i++) {
-            int a = edges[i][0];
-            int b = edges[i][1];
-            int c = edges[i][2];
+        PriorityQueue<int[]> pq = new PriorityQueue<>(Comparator.comparingInt(a -> a[0]));
+        pq.add(new int[] {0, 1});
 
-            // 최소 스패닝 트리 MST 구성
-            if (find(a) != find(b)) {
-                union(a, b);
-                sum += c;
-                picked++;
+        int sum = 0, picked = 0;
+        while (!pq.isEmpty() && picked < N) {
+            int[] current = pq.poll();
+            int c = current[0];
+            int u = current[1];
+
+            if (visited[u]) {
+                continue;
+            }
+            visited[u] = true;
+            sum += c;
+            picked++;
+
+            for (int[] a : adj[u]) {
+                int a0 = a[0];
+                int a1 = a[1];
+                if (!visited[a0]) {
+                    pq.add(new int[] {a1, a0});
+                }
             }
         }
+
         bw.write(String.valueOf(sum));
         bw.flush();
-    }
-
-    public static int find(int x) {
-        // x가 자식 노드일 경우, 부모 노드에 대해 재귀실행 함
-        if (x != parent[x]) {
-            parent[x] = find(parent[x]);
-        }
-        // x가 root 이면 그대로 반환
-        return parent[x];
-    }
-
-    public static void union(int x, int y) {
-        // x, y 정점의 최상위 정점을 각각 찾음 (속한 트리의 루트 노드를 찾음)
-        x = find(x);
-        y = find(y);
-
-        if (x != y) {
-            // 서로 다른 트리에 속한다면, 한 쪽의 트리를 다른 쪽에 붙임
-            parent[x] = y;
-        }
     }
 }
