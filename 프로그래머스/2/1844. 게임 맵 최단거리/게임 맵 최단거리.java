@@ -11,31 +11,32 @@ import java.util.*;
 class Solution {
     public int solution(int[][] maps) {
         Queue<int[]> queue = new LinkedList<>();
-        int[] y = {1, -1, 0, 0};
-        int[] x = {0, 0, 1, -1};
-        
-        int[][] visited = new int[maps.length][maps[0].length];
-        visited[0][0] = 1;
         queue.add(new int[]{0, 0, 1});
+            
+        boolean[][] visited = new boolean[maps.length][maps[0].length];
+        visited[0][0] = true;
+        
+        int[] dx = {1, -1, 0, 0};
+        int[] dy = {0, 0, 1, -1};
         
         while (!queue.isEmpty()) {
             int[] temp = queue.poll();
             
-            for (int i = 0; i < 4; i++) {
-                int newY = temp[0] + y[i];
-                int newX = temp[1] + x[i];
+            for (int index = 0; index < 4; index++) {
+                int newX = temp[0] + dx[index];
+                int newY = temp[1] + dy[index];
                 
-                // 갈 수 있을 때
-                if (newY >= 0 && newY < maps.length
-                   && newX >= 0 && newX < maps[0].length
-                   && maps[newY][newX] == 1
-                   && visited[newY][newX] == 0) {
-                    visited[newY][newX] = 1;
-                    queue.add(new int[]{newY, newX, temp[2] + 1});
+                // 갈 수 있는지 확인
+                if (newX >= 0 && newX < maps.length
+                   && newY >= 0 && newY < maps[0].length
+                   && maps[newX][newY] == 1
+                   && visited[newX][newY] == false) {
+                    queue.add(new int[]{newX, newY, temp[2] + 1});
+                    visited[newX][newY] = true;
                 }
-            
-                // 도착
-                if (newY == maps.length - 1 && newX == maps[0].length - 1) {
+                
+                // 도착 확인
+                if (newX == maps.length-1 && newY == maps[0].length-1) {
                     return temp[2] + 1;
                 }
             }
