@@ -12,7 +12,7 @@ class Solution {
     public int solution(int[][] maps) {
         Queue<int[]> queue = new LinkedList<>();
         queue.add(new int[]{0, 0, 1});
-            
+        
         boolean[][] visited = new boolean[maps.length][maps[0].length];
         visited[0][0] = true;
         
@@ -26,7 +26,7 @@ class Solution {
                 int newX = temp[0] + dx[index];
                 int newY = temp[1] + dy[index];
                 
-                // 갈 수 있는지 확인
+                // 갈 수 있는 경우
                 if (newX >= 0 && newX < maps.length
                    && newY >= 0 && newY < maps[0].length
                    && maps[newX][newY] == 1
@@ -35,8 +35,8 @@ class Solution {
                     visited[newX][newY] = true;
                 }
                 
-                // 도착 확인
-                if (newX == maps.length-1 && newY == maps[0].length-1) {
+                // 도착한 경우
+                if (newX == maps.length - 1 && newY == maps[0].length - 1) {
                     return temp[2] + 1;
                 }
             }
