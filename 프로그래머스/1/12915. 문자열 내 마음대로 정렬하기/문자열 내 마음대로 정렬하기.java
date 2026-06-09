@@ -6,7 +6,8 @@ class Solution {
             if (s1.charAt(n) == s2.charAt(n)) {
                 return s1.compareTo(s2);
             }
-            return Character.compare(s1.charAt(n), s2.charAt(n));
+            return s1.charAt(n) - s2.charAt(n);
+            // return Character.compare(s1.charAt(n), s2.charAt(n));
         });
         return strings;
     }
