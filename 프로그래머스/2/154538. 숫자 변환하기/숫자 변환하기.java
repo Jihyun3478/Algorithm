@@ -24,7 +24,7 @@ class Solution {
                 
                 if (cur + n <= y && visited[cur + n] == false) {
                     queue.add(cur + n);
-                    visited[cur+n] = true;
+                    visited[cur + n] = true;
                 }
                 if (cur * 2 <= y && visited[cur * 2] == false) {
                     queue.add(cur * 2);
