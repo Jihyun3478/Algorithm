@@ -18,19 +18,13 @@ class Solution {
             
             Map<String, Integer> check = new HashMap<>();
             for (int j = i; j < i + 10; j++) {
-                // if (discount.length - i <= 10) {
-                //     break;
-                // }
-            
                 check.put(discount[j], check.getOrDefault(discount[j], 0) + 1);
             
                 if (wants.equals(check)) {
                     answer++;
                 }
             }
-            // System.out.println(check);
         }
-        
         return answer;
     }
 }
